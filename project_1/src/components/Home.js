@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Mslider from './Sliders/Mslider';
 import Categories from './Products/Categories';
+import MsliderLoader from './Sliders/MsliderLoader';
 
 export default function Home() {
   const [heroSlides, setHeroSlides] = useState(null);
@@ -29,7 +30,7 @@ export default function Home() {
 
   return (
     <>
-      {heroSlides ?<Mslider slides ={heroSlides}/>:<p>loading...</p>}
+      {heroSlides ?<Mslider slides ={heroSlides}/>:<MsliderLoader/>}
       {Card ?<Categories cards = {Card}/>:<p>loading...</p>}
     </>
   );

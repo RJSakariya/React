@@ -13,7 +13,7 @@ export default function Categories({ cards }) {
   const filterCardsByCategory = () => {
     let category = '';
 
-    if (location.pathname === '/men') {
+    if (location.pathname === '/men' ||  location.pathname === '/') {
       category = "Men's";
     } else if (location.pathname === '/women') {
       category = "Women's";
@@ -35,7 +35,7 @@ export default function Categories({ cards }) {
       <div className='row'>
         <div className='col-12 col-sm-4 col-md-3 pe-3'>
           <div className='Categories'>
-          <div className='Products'>
+            <div className='Products'>
               <p>Best seller</p>
               <h1>products</h1>
             </div>
