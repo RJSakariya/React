@@ -31,12 +31,12 @@ export default function Mslider(props) {
         {props.slides.map((el,ind) => {
           return (
             <div className='row slide' key={ind}>
-              <div className='slider_titles'>
+              <div className='slider_titles d-none d-md-flex'>
                 <div className='title_box_1'>
-                  <h1 className='slider_title_1'>{el.title_1}</h1>
+                  <h1 className='slider_title_1 fs-1'>{el.title_1}</h1>
                 </div>
                 <div className='title_box_2'>
-                  <h1 className='slider_title_2'>
+                  <h1 className='slider_title_2 fs-1'>
                     {el.title_2}
                   </h1>
                 </div>
@@ -50,7 +50,7 @@ export default function Mslider(props) {
                 </button>
               </div>
               <div className='img'>
-                <img src={el.url} alt="image" className='slider_image'/>
+                <img src={el.url} alt="" className='slider_image'/>
               </div>
             </div>
             )

@@ -8,7 +8,7 @@ export default function Header(props) {
     <div className='Header'>
       <div className='container'>
         <div className='Logo'>
-          <img src='https://htmldemo.net/james/james/img/logo.png' />
+          <img src='https://htmldemo.net/james/james/img/logo.png' alt=''/>
         </div>
         <div className='d-flex justify-content-end'>
           <div className='links'>

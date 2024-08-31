@@ -31,9 +31,10 @@ export default function Categories({ cards }) {
   };
 
   return (
-    <div className='container'>
+    <div className='container-lg px-3 px-lg-0'>
+      <hr className='m-0' style={{backgroundColor: '#6a6a6a', height:'1px',border:'none'}}/>
       <div className='row'>
-        <div className='col-12 col-sm-4 col-md-3 pe-3'>
+        <div className='col-12 col-lg-3'>
           <div className='Categories'>
             <div className='Products'>
               <p>Best seller</p>
@@ -46,10 +47,11 @@ export default function Categories({ cards }) {
             <img src='https://htmldemo.net/james/james/img/banner/banner-5.jpg' alt="Banner" />
           </div>
         </div>
-        <div className='col-12 col-sm-8 col-md-9'>
+        <div className='col-12 col-lg-9 p-4'>
           <Card detail={filteredCards} />
         </div>
       </div>
+      <hr className='m-0 mt-3' style={{backgroundColor: '#6a6a6a', height:'1px',border:'none'}}/>
     </div>
   );
 }

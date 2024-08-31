@@ -3,7 +3,7 @@ import React from 'react'
 export default function MsliderLoader() {
     return (
         <div className="slider_loader">
-            <div className='container'>
+            <div className='container p-0'>
                 <div className='slider_titles_loader row'>
                     <div className="slider_title1_loader">
 

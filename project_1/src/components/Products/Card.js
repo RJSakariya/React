@@ -18,12 +18,12 @@ export default function Card(props) {
     <div className='row'>
       {props.detail.map((el, ind) => {
         return (
-          <div key={ind} className='col-12 col-sm-6 col-md-4 col-lg-3 p-2 mainCard'>
+          <div key={ind} className='col-12 col-sm-6 col-lg-3 p-2 mainCard'>
             <div className='Card'>
               {el.label === "new" ? <div className='label label_new'>{el.label}</div> : <div className='label'>{el.label}</div>}
               <div className='Card-img'>
-                <img src={el.url} />
-                <img src={el.url2} />
+                <img src={el.url}  alt=''/>
+                <img src={el.url2} alt=''/>
               </div>
               <p className='Card_title'>
                 {el.title}

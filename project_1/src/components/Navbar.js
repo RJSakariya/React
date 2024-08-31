@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Navbar() {
     return (
-        <div className='Navbar'>
+        <div className='Navbar row'>
             <div className='container'>
                 <div className='d-flex justify-content-end'>
                     <div className='Support'>
