@@ -9,6 +9,7 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
             <Route path="/shoes" element={<Home />} />
           </Routes>
         </div>
+        <Footer/>
       </Router>
     </>
   );
