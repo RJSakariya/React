@@ -13,13 +13,13 @@ export default function Footer() {
                             </p>
                             <ul>
                                 <li>
-                                    <p><i class="fa fa-fax"></i>(800) 123 456 789</p>
+                                    <p><i className="fa fa-fax"></i>(800) 123 456 789</p>
                                 </li>
                                 <li>
-                                    <p><i class="fa fa-phone"></i>(800) 123 456 789</p>
+                                    <p><i className="fa fa-phone"></i>(800) 123 456 789</p>
                                 </li>
                                 <li>
-                                    <p><i class="fa fa-envelope"></i>admin@bootexperts.com</p>
+                                    <p><i className="fa fa-envelope"></i>admin@bootexperts.com</p>
                                 </li>
                             </ul>
                         </div>

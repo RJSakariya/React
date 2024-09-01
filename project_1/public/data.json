@@ -22,7 +22,8 @@
       "url2": "https://htmldemo.net/james/james/img/product/2.png",
       "cancel_price": "",
       "main_price": "150$",
-      "rating": 5,
+      "rating": 3.5,
+      "liked": "no",
       "AddedIntoCart": "no"
     },
     {

@@ -3,6 +3,7 @@ import Mslider from './Sliders/Mslider';
 import Categories from './Products/Categories';
 import MsliderLoader from './Sliders/MsliderLoader';
 import Section1 from './Section1';
+import Slider from './Sliders/Slider';
 
 export default function Home() {
   const [heroSlides, setHeroSlides] = useState(null);
@@ -31,9 +32,11 @@ export default function Home() {
 
   return (
     <>
-      {heroSlides ?<Mslider slides ={heroSlides}/>:<MsliderLoader/>}
-      <Section1/>
-      {Card ?<Categories cards = {Card}/>:<p></p>}
+      {heroSlides ? <Mslider slides={heroSlides} /> : <MsliderLoader />}
+      <Section1 />
+      {Card ? <Categories cards={Card} /> : <p></p>}
+      {Card ? <Slider title="FEATURED PRODUCTS" cards={Card} /> : <p></p>}
+      {Card ? <Slider title="NEW PRODUCTS" cards={Card} /> : <p></p>}
     </>
   );
 }

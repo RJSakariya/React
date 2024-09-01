@@ -562,6 +562,29 @@ i {
   color: #f25862;
 }
 
+/* Slider */
+.SliderCard{
+  transition: 1s ease-in-out;
+}
+.Slider{
+  overflow-x: hidden;
+}
+.slider_heading h5{
+  font-weight: 700;
+}
+.slider_heading h5 i{
+  margin-right: 20px;
+}
+.sliderCon button{
+  background-color: transparent;
+  border: none;
+}
+.sliderCon button i{
+  font-size: 20px;
+}
+.sliderCon button:hover{
+  color: #f25862;
+}
 /* Footer */
 
 .Footer {
@@ -660,6 +683,81 @@ i {
 
 .BottomFooter img {
   width: 270px;
+}
+
+.about h5{
+  text-transform: uppercase;
+  font-weight: 400;
+}
+.about p {
+  color: #a8a8a8;
+  font-size: 13px;
+  font-family: "Open Sans", sans-serif;
+}
+.about .col-lg-4 img{
+  width: 100%;
+  height: fit-content;
+}
+.member-info{
+  height: fit-content;
+  overflow: hidden;
+  padding: 10px;
+  border-radius: 50%;
+  border: #f25862;
+  position: relative;
+}
+.member-info img{
+  width: 100%;
+  border-radius: 50%;
+}
+.overlay{
+  height: calc(100% - 20px);
+  width: calc(100% - 20px);
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  border-radius: 50%;
+  background-color: #f2586244;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: rotate(0);
+  gap: 5px;
+}
+.member-info:hover{
+  border: 1px solid #f25862;
+}
+.member-info:hover .overlay{
+  visibility: visible;
+  animation: over .5s ease-in-out forwards;
+}
+.member-info h6{
+  text-transform: uppercase;
+}
+.overlay i{
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  line-height: 40px;
+  background-color: white;
+  color: #838383;
+  border-radius: 50%;
+}
+.overlay i:hover{
+  color: #f25862;
+  cursor: pointer;
+}
+
+@keyframes over{
+  from{
+    transform: rotate(0deg);
+    opacity: 0;
+  }
+  to{
+    transform: rotate(360deg);
+    opacity: 1;
+  }
 }
 
 @media screen and (max-width : 991px) {
