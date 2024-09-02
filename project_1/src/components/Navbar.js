@@ -1,5 +1,4 @@
 import React from 'react'
-import Like from './Like'
 
 export default function Navbar() {
     return (
@@ -26,7 +25,6 @@ export default function Navbar() {
                     </div>
                 </div>
             </div>
-            <Like/>
         </div>
     )
 }
