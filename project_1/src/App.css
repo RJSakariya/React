@@ -27,8 +27,30 @@
   align-items: center;
   color: black;
   border-left: 1px solid #e5e5e5;
+  position: relative;
+}
+.dropdown{
+  width: fit-content;
+  height: fit-content;
+  position: absolute;
+  top: 60px;
+  display: none;
 }
 
+.dropdown button{
+  padding: 10px;
+  width: 100%;
+  border: none;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+.dropdown button:hover{
+  background-color: #f25862;
+  color: white;
+}
+.Bar:hover .dropdown{
+  display: block;
+}
 .Support {
   height: 60px;
   width: fit-content;

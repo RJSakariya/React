@@ -1,6 +1,7 @@
 import React from 'react'
 
 export default function Card(props) {
+  
   function rating(rate) {
     let stars = [];
     for (var i = 1; i <= rate; i++) {
