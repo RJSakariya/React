@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './App.css'
 
 function App() {
@@ -6,19 +6,28 @@ function App() {
   const [detailArr, setDetailArr] = useState([])
   const handleSubmit = () => {
     setDetail({ name: document.getElementById("name").value, surname: document.getElementById("surname").value })
-    setDetailArr([detail,...detailArr])
+    setDetailArr([detail, ...detailArr])
     document.getElementById("name").value = ""
     document.getElementById("surname").value = ""
-    setDetail({ name: "", surname: ""})
+    setDetail({ name: "", surname: "" })
   }
   const handleDelete = () => {
-    setDetail([detailArr.splice(0,1)])
+    setDetail([detailArr.splice(0, 1)])
   }
-  
+
   const handleChange = () => {
     setDetail({ name: document.getElementById("name").value, surname: document.getElementById("surname").value })
   }
-  
+
+  useEffect(() => {
+    console.log("component did mount")
+  })
+  useEffect(() => {
+    console.log("component did mount first time")
+  },[])
+  useEffect(() => {
+    console.log("component did update")
+  },[detailArr])
   return (
     <div className='container'>
       <div className='row'>
@@ -48,7 +57,7 @@ function App() {
               {detailArr.map((el, ind) => {
                 return (
                   <tr key={ind}>
-                    <th scope="row">{ind+1}</th>
+                    <th scope="row">{ind + 1}</th>
                     <td>{el.name}</td>
                     <td>{el.surname}</td>
                   </tr>
