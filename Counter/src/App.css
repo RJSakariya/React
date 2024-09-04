@@ -1,0 +1,275 @@
+body {
+  background-color: black;
+}
+
+h1 {
+  color: white;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+h1::after,h1::before{
+  content: attr(name);
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: -1;
+}
+h1.zigzag-effect::before {
+  color: palevioletred;
+  animation: zigzag-move 1s ease-in-out;
+}
+h1.zigzag-effect::after {
+  color: purple;
+  animation: zigzag-move 1.5s ease-in-out;
+}
+
+h1.diagonal-effect::after {
+  color: green;
+  animation: diagonal-bounce 1s ease-in-out ;
+}
+h1.diagonal-effect::before {
+  color: yellowgreen;
+  animation: diagonal-bounce 1.5s ease-in-out ;
+}
+
+h1.shake-effect::before {
+  color: orange;
+  animation: shake-horizontal 1s ease-in-out ;
+}
+h1.shake-effect::after {
+  color: yellow;
+  animation: shake-horizontal 1.5s ease-in-out ;
+}
+
+h1.expand-contract::after {
+  color: teal;
+  animation: expand-contract 1.5s ease-in-out ;
+}
+h1.expand-contract::before {
+  color: blue;
+  animation: expand-contract 1s ease-in-out ;
+}
+
+h1.spiral-effect::before {
+  color: brown;
+  animation: spiral-move 1.5s ease-in-out ;
+}
+h1.spiral-effect::after {
+  color: red;
+  animation: spiral-move 1s ease-in-out ;
+}
+@keyframes zigzag-move {
+  0% {
+    left: 0;
+    top: 0;
+    filter: blur(0px);
+  }
+
+  20% {
+    left: 10px;
+    top: -10px;
+  }
+
+  40% {
+    left: -10px;
+    top: 10px;
+  }
+
+  60% {
+    left: 15px;
+    top: -15px;
+  }
+
+  80% {
+    left: -15px;
+    top: 15px;
+  }
+
+  100% {
+    left: 0;
+    top: 0;
+    filter: blur(10px);
+  }
+}
+@keyframes diagonal-bounce {
+  0% {
+    left: 0;
+    top: 0;
+    filter: blur(0px);
+  }
+
+  25% {
+    left: 20px;
+    top: -20px;
+  }
+
+  50% {
+    left: -20px;
+    top: 20px;
+  }
+
+  75% {
+    left: 10px;
+    top: -10px;
+  }
+
+  100% {
+    left: 0;
+    top: 0;
+    filter: blur(10px);
+  }
+}
+@keyframes shake-horizontal {
+  0% {
+    left: 0;
+    filter: blur(0px);
+  }
+
+  10% {
+    left: -5px;
+  }
+
+  20% {
+    left: 5px;
+  }
+
+  30% {
+    left: -10px;
+  }
+
+  40% {
+    left: 10px;
+  }
+
+  50% {
+    left: -5px;
+  }
+
+  60% {
+    left: 5px;
+  }
+
+  70% {
+    left: 0;
+  }
+
+  100% {
+    left: 0;
+    filter: blur(10px);
+  }
+}
+@keyframes expand-contract {
+  0% {
+    transform: scale(1);
+    filter: blur(0px);
+  }
+
+  25% {
+    transform: scale(2);
+  }
+
+  50% {
+    transform: scale(0.8);
+  }
+
+  75% {
+    transform: scale(4);
+  }
+
+  100% {
+    transform: scale(1);
+    filter: blur(10px);
+  }
+}
+@keyframes spiral-move {
+  0% {
+    left: 0;
+    top: 0;
+    transform: rotate(0deg);
+    filter: blur(0px);
+  }
+
+  25% {
+    left: 15px;
+    top: -15px;
+    transform: rotate(45deg);
+  }
+
+  50% {
+    left: -15px;
+    top: 15px;
+    transform: rotate(90deg);
+  }
+
+  75% {
+    left: 20px;
+    top: -20px;
+    transform: rotate(135deg);
+  }
+
+  100% {
+    left: 0;
+    top: 0;
+    transform: rotate(180deg);
+    filter: blur(10px);
+  }
+}
+
+
+.container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.button {
+  width: 60px;
+  height: 60px;
+  border: none;
+  border-radius: 50%;
+  font-size: 25px;
+  margin: 20px;
+  background-color: white;
+  position: relative;
+}
+
+.button::before,.button::after {
+  content: "";
+  height: 0%;
+  width: 0%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+.button.animate::before {
+  animation: click .2s linear;
+}
+.button.animate::after {
+  animation: click .3s linear;
+}
+
+@keyframes click {
+  0% {
+    width: 100%;
+    height: 100%;
+    border-top: 3px solid white;
+  }
+
+  60% {
+    height: 150%;
+    width: 150%;
+    border-left: 3px solid white;
+  }
+
+  100% {
+    height: 100%;
+    width: 100%;
+    border-right: 3px solid white;
+  }
+}
