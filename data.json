@@ -1,0 +1,270 @@
+{ 
+  "hero_slides": [
+    {
+      "title_1": "Sale products",
+      "title_2": "GET UP TO 50% SALE",
+      "title_3": "Lorem Ipsum is simply dummy text of the printing",
+      "url": "https://htmldemo.net/james/james/img/slider/slider-1.jpg"
+    },
+    {
+      "title_1": "Sale products",
+      "title_2": "Nike Air Max 2015",
+      "title_3": "Lorem Ipsum is simply dummy text of the printing",
+      "url": "https://htmldemo.net/james/james/img/slider/slider-2.jpg"
+    }
+  ],
+  "card": [
+    {
+      "label": "new",
+      "category": "Men's",
+      "title": "Fusce aliquam",
+      "url": "https://htmldemo.net/james/james/img/product/1.png",
+      "url2": "https://htmldemo.net/james/james/img/product/2.png",
+      "cancel_price": "",
+      "main_price": "150$",
+      "rating": 3.5,
+      "liked": "no",
+      "AddedIntoCart": "no"
+    },
+    {
+      "label": "sale",
+      "category": "Women's",
+      "title": "Fusce aliquam",
+      "url": "https://htmldemo.net/james/james/img/product/3.png",
+      "url2": "https://htmldemo.net/james/james/img/product/4.png",
+      "cancel_price": "",
+      "main_price": "150$",
+      "rating": 2.5,
+      "liked": "no",
+      "AddedIntoCart": "no"
+    },
+    {
+      "label": "new",
+      "category": "Women's",
+      "title": "Fusce aliquam",
+      "url": "https://htmldemo.net/james/james/img/product/5.png",
+      "url2": "https://htmldemo.net/james/james/img/product/6.png",
+      "cancel_price": "1000$",
+      "main_price": "900$",
+      "rating": 4.5,
+      "liked": "no",
+      "AddedIntoCart": "no"
+    },
+    {
+      "label": "sale",
+      "category": "Footwear",
+      "title": "Fusce aliquam",
+      "url": "https://htmldemo.net/james/james/img/product/1.png",
+      "url2": "https://htmldemo.net/james/james/img/product/2.png",
+      "cancel_price": "",
+      "main_price": "150$",
+      "rating": 3,
+      "liked": "no",
+      "AddedIntoCart": "no"
+    },
+    {
+      "label": "sale",
+      "category": "Footwear",
+      "title": "Fusce aliquam",
+      "url": "https://htmldemo.net/james/james/img/product/3.png",
+      "url2": "https://htmldemo.net/james/james/img/product/4.png",
+      "cancel_price": "",
+      "main_price": "150$",
+      "rating": 1,
+      "liked": "no",
+      "AddedIntoCart": "no"
+    },
+    {
+      "label": "new",
+      "category": "Footwear",
+      "title": "Fusce aliquam",
+      "url": "https://htmldemo.net/james/james/img/product/7.png",
+      "url2": "https://htmldemo.net/james/james/img/product/8.png",
+      "cancel_price": "1000$",
+      "main_price": "280$",
+      "rating": 5,
+      "liked": "no",
+      "AddedIntoCart": "no"
+    },
+    {
+      "label": "sale",
+      "category": "Footwear",
+      "title": "Fusce aliquam",
+      "url": "https://htmldemo.net/james/james/img/product/9.png",
+      "url2": "https://htmldemo.net/james/james/img/product/10.png",
+      "cancel_price": "660$",
+      "main_price": "330$",
+      "rating": 3,
+      "liked": "no",
+      "AddedIntoCart": "no"
+    },
+    {
+      "label": "sale",
+      "category": "Men's",
+      "title": "Fusce aliquam",
+      "url": "https://htmldemo.net/james/james/img/product/11.png",
+      "url2": "https://htmldemo.net/james/james/img/product/12.png",
+      "cancel_price": "1100$",
+      "main_price": "250$",
+      "rating": 4.5,
+      "liked": "no",
+      "AddedIntoCart": "no"
+    },
+    {
+      "label": "new",
+      "category": "Footwear",
+      "title": "Fusce aliquam",
+      "url": "https://htmldemo.net/james/james/img/product/13.png",
+      "url2": "https://htmldemo.net/james/james/img/product/14.png",
+      "cancel_price": "200$",
+      "main_price": "100$",
+      "rating": 5,
+      "liked": "no",
+      "AddedIntoCart": "no"
+    },
+    {
+      "label": "sale",
+      "category": "Men's",
+      "title": "Fusce aliquam",
+      "url": "https://htmldemo.net/james/james/img/product/15.png",
+      "url2": "https://htmldemo.net/james/james/img/product/16.png",
+      "cancel_price": "2000$",
+      "main_price": "1500$",
+      "rating": 2.5,
+      "liked": "no",
+      "AddedIntoCart": "no"
+    },
+    {
+      "label": "sale",
+      "category": "Footwear",
+      "title": "Fusce aliquam",
+      "url": "https://htmldemo.net/james/james/img/product/17.png",
+      "url2": "https://htmldemo.net/james/james/img/product/18.png",
+      "cancel_price": "300$",
+      "main_price": "150$",
+      "rating": 4,
+      "liked": "no",
+      "AddedIntoCart": "no"
+    },
+    {
+      "label": "sale",
+      "category": "Men's",
+      "title": "Fusce aliquam",
+      "url": "https://htmldemo.net/james/james/img/product/19.png",
+      "url2": "https://htmldemo.net/james/james/img/product/20.png",
+      "cancel_price": "",
+      "main_price": "150$",
+      "rating": 2.5,
+      "liked": "no",
+      "AddedIntoCart": "no"
+    },
+    {
+      "label": "sale",
+      "category": "Men's",
+      "title": "Fusce aliquam",
+      "url": "https://htmldemo.net/james/james/img/product/21.png",
+      "url2": "https://htmldemo.net/james/james/img/product/22.png",
+      "cancel_price": "",
+      "main_price": "150$",
+      "rating": 3.5,
+      "liked": "no",
+      "AddedIntoCart": "no"
+    },
+    {
+      "label": "sale",
+      "category": "Men's",
+      "title": "Fusce aliquam",
+      "url": "https://htmldemo.net/james/james/img/product/23.png",
+      "url2": "https://htmldemo.net/james/james/img/product/24.png",
+      "cancel_price": "1100",
+      "main_price": "400$",
+      "rating": 4.5,
+      "liked": "no",
+      "AddedIntoCart": "no"
+    },
+    {
+      "label": "new",
+      "category": "Men's",
+      "title": "Fusce aliquam",
+      "url": "https://htmldemo.net/james/james/img/product/25.png",
+      "url2": "https://htmldemo.net/james/james/img/product/26.png",
+      "cancel_price": "1200$",
+      "main_price": "300$",
+      "rating": 3.5,
+      "liked": "no",
+      "AddedIntoCart": "no"
+    },
+    {
+      "label": "new",
+      "category": "Shoes",
+      "title": "Fusce aliquam",
+      "url": "https://htmldemo.net/james/james/img/product/9.png",
+      "url2": "https://htmldemo.net/james/james/img/product/8.png",
+      "cancel_price": "2000$",
+      "main_price": "1500$",
+      "rating": 3.5,
+      "liked": "no",
+      "AddedIntoCart": "no"
+    },
+    {
+      "label": "new",
+      "category": "Shoes",
+      "title": "Fusce aliquam",
+      "url": "https://htmldemo.net/james/james/img/product/10.png",
+      "url2": "https://htmldemo.net/james/james/img/product/7.png",
+      "cancel_price": "300$",
+      "main_price": "150$",
+      "rating": 4,
+      "liked": "no",
+      "AddedIntoCart": "no"
+    },
+    {
+      "label": "sale",
+      "category": "Shoes",
+      "title": "Fusce aliquam",
+      "url": "https://htmldemo.net/james/james/img/product/13.png",
+      "url2": "https://htmldemo.net/james/james/img/product/14.png",
+      "cancel_price": "1200$",
+      "main_price": "1000$",
+      "rating": 2.5,
+      "liked": "no",
+      "AddedIntoCart": "no"
+    },
+    {
+      "label": "sale",
+      "category": "Shoes",
+      "title": "Fusce aliquam",
+      "url": "https://htmldemo.net/james/james/img/product/18.png",
+      "url2": "https://htmldemo.net/james/james/img/product/17.png",
+      "cancel_price": "800$",
+      "main_price": "600$",
+      "rating": 4,
+      "liked": "no",
+      "AddedIntoCart": "no"
+    },
+    {
+      "label": "new",
+      "category": "Shoes",
+      "title": "Fusce aliquam",
+      "url": "https://htmldemo.net/james/james/img/product/19.png",
+      "url2": "https://htmldemo.net/james/james/img/product/20.png",
+      "cancel_price": "1000$",
+      "main_price": "150$",
+      "rating": 3.5,
+      "liked": "no",
+      "AddedIntoCart": "no"
+    },
+    {
+      "label": "new",
+      "category": "Men's",
+      "title": "Fusce aliquam",
+      "url": "https://htmldemo.net/james/james/img/product/2.png",
+      "url2": "https://htmldemo.net/james/james/img/product/15.png",
+      "cancel_price": "500$",
+      "main_price": "150$",
+      "rating": 5,
+      "liked": "no",
+      "AddedIntoCart": "no"
+    }
+  ]
+}
