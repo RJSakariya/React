@@ -1,0 +1,14 @@
+.container {
+    height: 90vh;
+}
+.header{
+    height: 10vh;
+}
+.row{
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.card{
+    height: fit-content;
+}
