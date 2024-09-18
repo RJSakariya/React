@@ -36,6 +36,15 @@ export default function AddProduct({ detail, setDetail, name, phone, addProduct,
     const [err, setErr] = useState("");
     const [errDisplay, setDisplay] = useState('none');
     const closeAddProduct = () => {
+        setProductName("");
+        setProductPrice("");
+        setImage("");
+        setAlt("");
+        setRating(2);
+        setCategory("CLOTHING");
+        setSize('L');
+        setClothCategory("MEN'S");
+        setClothMaterial('SILK');
         setAddProduct("none");
     };
     const getCategory = (value) => {
@@ -79,7 +88,7 @@ export default function AddProduct({ detail, setDetail, name, phone, addProduct,
                     return d;
                 });
                 setDetail(updatedDetail);
-                setAddProduct("none");
+                closeAddProduct()
             }
         }
         else if (category === 'ELETRONIC') {
@@ -112,7 +121,7 @@ export default function AddProduct({ detail, setDetail, name, phone, addProduct,
                     return d;
                 });
                 setDetail(updatedDetail);
-                setAddProduct("none");
+                closeAddProduct()
             }
         }
         else if (category === 'FOOD') {
@@ -145,7 +154,7 @@ export default function AddProduct({ detail, setDetail, name, phone, addProduct,
                     return d;
                 });
                 setDetail(updatedDetail);
-                setAddProduct("none");
+                closeAddProduct()
             }
         }
         else if (category === 'BOOK') {
@@ -178,10 +187,10 @@ export default function AddProduct({ detail, setDetail, name, phone, addProduct,
                     return d;
                 });
                 setDetail(updatedDetail);
-                setAddProduct("none");
+                closeAddProduct()
             }
         }
-        else if(category === 'MEDICINE') {
+        else if (category === 'MEDICINE') {
             if (!medicineCategory || !medicineExpired || !medicineSet) {
                 setErr('Please fill all medicine fields');
                 setDisplay("block");
@@ -211,7 +220,7 @@ export default function AddProduct({ detail, setDetail, name, phone, addProduct,
                     return d;
                 });
                 setDetail(updatedDetail);
-                setAddProduct("none");
+                closeAddProduct()
             }
         }
     }
@@ -310,12 +319,6 @@ export default function AddProduct({ detail, setDetail, name, phone, addProduct,
                 <ButtonGroup>
                     <Button variant="contained" color="success" sx={{ marginTop: 2 }} onClick={() => handleSave()}>
                         SAVE
-                    </Button>
-                    <Button variant="outlined" sx={{ marginTop: 2, marginLeft: 2 }}>
-                        PREVIEW
-                    </Button>
-                    <Button variant="contained" color="error" sx={{ marginTop: 2, marginLeft: 2 }}>
-                        RESET
                     </Button>
                 </ButtonGroup>
             </Card >
