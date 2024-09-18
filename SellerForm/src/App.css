@@ -1,0 +1,76 @@
+body {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.body {
+    background: url('https://media.licdn.com/dms/image/D4D12AQEhF3g4hytzlQ/article-cover_image-shrink_720_1280/0/1717142199939?e=2147483647&v=beta&t=nYd5nt139TqZz8IPgO85OfmKM63aQw_tqg8feZtYF-o');
+    background-size: 100%;
+    min-width: 320px;
+    height: 100vh;
+}
+
+.block-profile {
+    animation: show-profile .5s ease-in-out forwards;
+}
+
+.none-profile {
+    animation: hide-profile .5s ease-in-out forwards;
+}
+
+@keyframes show-profile {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes hide-profile {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+}
+
+.block-product {
+    animation: show-product .5s ease-in-out forwards;
+}
+
+.none-product {
+    animation: hide-product .5s ease-in-out forwards;
+}
+
+@keyframes show-product {
+    0% {
+        opacity: 0;
+        transform: scale(0.5) translateX(-50%) translateY(-50%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1) translateX(-50%) translateY(-50%);
+    }
+}
+
+@keyframes hide-product {
+    0% {
+        opacity: 1;
+        transform: scale(1) translateX(-50%) translateY(-50%);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(0.5) translateX(-50%) translateY(-50%);
+    }
+}
