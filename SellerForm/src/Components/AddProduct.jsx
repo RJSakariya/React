@@ -24,15 +24,15 @@ export default function AddProduct({ detail, setDetail, name, phone, addProduct,
     const [eletronicCategory, setEletronicCategory] = useState('TV');
     const [chargeble, setChargeble] = useState('CHARGEBLE');
     const [warranty, setWarranty] = useState('0');
-    const [foodCategory, setFoodCategory] = useState('');
-    const [vagOrNon, setVagOrNon] = useState('');
+    const [foodCategory, setFoodCategory] = useState('PIZZA');
+    const [vagOrNon, setVagOrNon] = useState('VEG');
     const [foodExpired, setFoodExpired] = useState(defaultExpired);
     const [bookAuthor, setBookAuthor] = useState('');
     const [bookColor, setBookColor] = useState('');
     const [bookPages, setBookPages] = useState('');
-    const [medicineCategory, setMedicineCategory] = useState('');
-    const [medicineExpired, setMedicineExpired] = useState('');
-    const [medicineSet, setMedicineSet] = useState('');
+    const [medicineCategory, setMedicineCategory] = useState('MOUTH');
+    const [medicineExpired, setMedicineExpired] = useState(defaultExpired);
+    const [medicineSet, setMedicineSet] = useState('10 TABLETS');
     const [err, setErr] = useState("");
     const [errDisplay, setDisplay] = useState('none');
     const closeAddProduct = () => {
@@ -78,6 +78,135 @@ export default function AddProduct({ detail, setDetail, name, phone, addProduct,
                     return d;
                 });
                 setDetail(updatedDetail);
+                setAddProduct("none");
+            }
+        }
+        else if (category === 'ELETRONIC') {
+            if (!eletronicCategory || !chargeble || !warranty) {
+                setErr('Please fill all eletronic fields');
+                setDisplay("block");
+            }
+            else {
+                // eslint-disable-next-line react/prop-types
+                let updatedDetail = detail.map((d) => {
+                    if (d.Name === name && d.Phone === phone) {
+                        return {
+                            ...d,
+                            product: [
+                                {
+                                    ProductName: productName,
+                                    ProductPrice: productPrice,
+                                    ProductImg: image,
+                                    AltText: alt,
+                                    Rating: rating,
+                                    Category: category,
+                                    Item: eletronicCategory,
+                                    Chargeble: chargeble,
+                                    Warranty: warranty,
+                                },
+                            ],
+                        };
+                    }
+                    return d;
+                });
+                setDetail(updatedDetail);
+                setAddProduct("none");
+            }
+        }
+        else if (category === 'FOOD') {
+            if (!foodCategory || !vagOrNon || !foodExpired) {
+                setErr('Please fill all food fields');
+                setDisplay("block");
+            }
+            else {
+                // eslint-disable-next-line react/prop-types
+                let updatedDetail = detail.map((d) => {
+                    if (d.Name === name && d.Phone === phone) {
+                        return {
+                            ...d,
+                            product: [
+                                {
+                                    ProductName: productName,
+                                    ProductPrice: productPrice,
+                                    ProductImg: image,
+                                    AltText: alt,
+                                    Rating: rating,
+                                    Category: category,
+                                    Name: foodCategory,
+                                    VagOrNon: vagOrNon,
+                                    Expiry: foodExpired,
+                                },
+                            ],
+                        };
+                    }
+                    return d;
+                });
+                setDetail(updatedDetail);
+                setAddProduct("none");
+            }
+        }
+        else if (category === 'BOOK') {
+            if (!bookAuthor || !bookColor || !bookPages) {
+                setErr('Please fill all Book fields');
+                setDisplay("block");
+            }
+            else {
+                // eslint-disable-next-line react/prop-types
+                let updatedDetail = detail.map((d) => {
+                    if (d.Name === name && d.Phone === phone) {
+                        return {
+                            ...d,
+                            product: [
+                                {
+                                    ProductName: productName,
+                                    ProductPrice: productPrice,
+                                    ProductImg: image,
+                                    AltText: alt,
+                                    Rating: rating,
+                                    Category: category,
+                                    Author: bookAuthor,
+                                    Color: bookColor,
+                                    Pages: bookPages,
+                                },
+                            ],
+                        };
+                    }
+                    return d;
+                });
+                setDetail(updatedDetail);
+                setAddProduct("none");
+            }
+        }
+        else if(category === 'MEDICINE') {
+            if (!medicineCategory || !medicineExpired || !medicineSet) {
+                setErr('Please fill all medicine fields');
+                setDisplay("block");
+            }
+            else {
+                // eslint-disable-next-line react/prop-types
+                let updatedDetail = detail.map((d) => {
+                    if (d.Name === name && d.Phone === phone) {
+                        return {
+                            ...d,
+                            product: [
+                                {
+                                    ProductName: productName,
+                                    ProductPrice: productPrice,
+                                    ProductImg: image,
+                                    AltText: alt,
+                                    Rating: rating,
+                                    Category: category,
+                                    Medicine: medicineCategory,
+                                    Expiry: medicineExpired,
+                                    Set: medicineSet,
+                                },
+                            ],
+                        };
+                    }
+                    return d;
+                });
+                setDetail(updatedDetail);
+                setAddProduct("none");
             }
         }
     }

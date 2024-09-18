@@ -1,46 +1,50 @@
 import { FormControl, InputLabel, MenuItem, Select } from "@mui/material";
-import {DatePicker} from '@mui/x-date-pickers';
+import { DateField} from '@mui/x-date-pickers';
+import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
+import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 
-export default function Food(foodCategory, setFoodCategory, vagOrNon, setVagOrNon, foodExpired, setFoodExpired) {
+// eslint-disable-next-line react/prop-types
+export default function Food({foodCategory, setFoodCategory, vagOrNon, setVagOrNon, foodExpired, setFoodExpired}) {
   return (
     <>
       <FormControl sx={{ minWidth: "100%", marginTop: 2 }}>
-        <InputLabel id="demo-controlled-open-select-label">ITEM</InputLabel>
+        <InputLabel id="demo-controlled-open-select-label">FOOD CATAGORY</InputLabel>
         <Select
           labelId="demo-controlled-open-select-label"
           id="demo-controlled-open-select"
-          label="ITEM"
+          label="FOOD CATAGORY"
           value={foodCategory}
           onChange={(e) => setFoodCategory(e.target.value)}
           sx={{ width: "100%" }}
         >
-          <MenuItem value={"TV"}>TV</MenuItem>
-          <MenuItem value={"REFRIGERATOR"}>REFRIGERATOR</MenuItem>
-          <MenuItem value={"WASHING MUCHINE"}>WASHING MUCHINE</MenuItem>
-          <MenuItem value={"AC"}>AC</MenuItem>
-          <MenuItem value={"FAN"}>FAN</MenuItem>
+          <MenuItem value={"PIZZA"}>PIZZA</MenuItem>
+          <MenuItem value={"BURGER"}>BURGER</MenuItem>
+          <MenuItem value={"VADA-PAW"}>VADA PAW</MenuItem>
         </Select>
       </FormControl>
       <FormControl sx={{ minWidth: "100%", marginTop: 2 }}>
-        <InputLabel id="demo-controlled-open-select-label">CHARGEBLE OR NOT</InputLabel>
+        <InputLabel id="demo-controlled-open-select-label">VEG OR NON VEG</InputLabel>
         <Select
           labelId="demo-controlled-open-select-label"
           id="demo-controlled-open-select"
-          label="CHARGEBLE"
+          label="VEG OR NON VEG"
           value={vagOrNon}
           onChange={(e) => setVagOrNon(e.target.value)}
           sx={{ width: "100%" }}
         >
-          <MenuItem value={"CHARGEBLE"}>{"CHARGEBLE"}</MenuItem>
-          <MenuItem value={"NOT CHARGEBLE"}>{"NOT CHARGEBLE"}</MenuItem>
+          <MenuItem value={"VEG"}>VEG</MenuItem>
+          <MenuItem value={"NON-VEG"}>NON VEG</MenuItem>
         </Select>
       </FormControl>
-      <DatePicker
-        defaultValue={foodExpired}
-        disablePast
-        views={['day', 'month', 'year']}
-        onChange={(e)=>setFoodExpired(e.target.value)}
-      />
+      <LocalizationProvider dateAdapter={AdapterDayjs}>
+        <DateField
+          value={foodExpired}
+          disablePast
+          label="EXPIRY DATE"
+          onChange={(e) => setFoodExpired(e.target.value)}
+          sx={{marginTop:2}}
+        />
+      </LocalizationProvider>
     </>
   )
 }
