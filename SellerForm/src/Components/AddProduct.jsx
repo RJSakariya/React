@@ -61,6 +61,7 @@ export default function AddProduct({ detail, setDetail, name, phone, addProduct,
                         return {
                             ...d,
                             product: [
+                                ...d.product,
                                 {
                                     ProductName: productName,
                                     ProductPrice: productPrice,
@@ -93,6 +94,7 @@ export default function AddProduct({ detail, setDetail, name, phone, addProduct,
                         return {
                             ...d,
                             product: [
+                                ...d.product,
                                 {
                                     ProductName: productName,
                                     ProductPrice: productPrice,
@@ -125,6 +127,7 @@ export default function AddProduct({ detail, setDetail, name, phone, addProduct,
                         return {
                             ...d,
                             product: [
+                                ...d.product,
                                 {
                                     ProductName: productName,
                                     ProductPrice: productPrice,
@@ -157,6 +160,7 @@ export default function AddProduct({ detail, setDetail, name, phone, addProduct,
                         return {
                             ...d,
                             product: [
+                                ...d.product,
                                 {
                                     ProductName: productName,
                                     ProductPrice: productPrice,
@@ -189,6 +193,7 @@ export default function AddProduct({ detail, setDetail, name, phone, addProduct,
                         return {
                             ...d,
                             product: [
+                                ...d.product,
                                 {
                                     ProductName: productName,
                                     ProductPrice: productPrice,
@@ -265,7 +270,7 @@ export default function AddProduct({ detail, setDetail, name, phone, addProduct,
     }, [err])
     return (
         <>
-            <Card sx={{ paddingX: 2, paddingY: 3, backgroundColor: '#afafaf2f', backdropFilter: 'blur(5px)', position: 'fixed', top: '50%', left: '50%', transform: 'translateX(-50%) translateY(-50%)', maxWidth: 300, minWidth: 200, display: visible ? "block" : "none", maxHeight: 500, overflowY: 'auto', zIndex: 1100 }} className={`profile ${animate ? (addProduct === 'block' ? 'block-product' : 'none-product') : ''}`}>
+            <Card sx={{ paddingX: 2, paddingY: 3, backgroundColor: '#afafaf2f', backdropFilter: 'blur(5px)', position: 'fixed', top: '50%', left: '50%', transform: 'translateX(-50%) translateY(-50%)', maxWidth: 300, minWidth: 200, display: visible ? "block" : "none", maxHeight: 300, overflowY: 'auto', zIndex: 1100 }} className={`profile ${animate ? (addProduct === 'block' ? 'block-product' : 'none-product') : ''}`}>
                 <IconButton
                     sx={{ position: 'absolute', top: 5, right: 5 }}
                     onClick={() => closeAddProduct()}
