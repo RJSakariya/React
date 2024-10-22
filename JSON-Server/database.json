@@ -1,0 +1,50 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "title": "Product 1",
+      "image": "https://example.com/image1.jpg",
+      "description": "This is the description for product 1. It's a high-quality product.",
+      "price": 29.99,
+      "quantityAvailable": 25,
+      "rating": 4.5
+    },
+    {
+      "id": "2",
+      "title": "Product 2",
+      "image": "https://example.com/image2.jpg",
+      "description": "This is the description for product 2. It's a popular product with great reviews.",
+      "price": 49.99,
+      "quantityAvailable": 5,
+      "rating": 4.8
+    },
+    {
+      "id": "3",
+      "title": "Product 3",
+      "image": "https://example.com/image3.jpg",
+      "description": "This is the description for product 3. It's a top-selling item.",
+      "price": 19.99,
+      "quantityAvailable": 5,
+      "rating": 4.2
+    },
+    {
+      "id": "4",
+      "title": "Product 4",
+      "image": "https://example.com/image4.jpg",
+      "description": "This is the description for product 4. Ideal for daily use.",
+      "price": 34.99,
+      "quantityAvailable": 2,
+      "rating": 4
+    },
+    {
+      "id": "5",
+      "title": "Product 5",
+      "image": "https://example.com/image5.jpg",
+      "description": "This is the description for product 5. It offers great value for money.",
+      "price": 59.99,
+      "quantityAvailable": 10,
+      "rating": 4.7
+    }
+  ],
+  "userItem": []
+}
