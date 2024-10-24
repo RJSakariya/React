@@ -15,14 +15,14 @@ export const slice = createSlice({
     },
     reducers: {},
     extraReducers: (builder => {
-        builder.addCase(fetchData.pending, (state, action) => {
+        builder.addCase(fetchData.pending, (state) => {
             state.loading=true
         })
         builder.addCase(fetchData.fulfilled, (state, action) => {
             state.data = action.payload
             state.loading=false
         })
-        builder.addCase(fetchData.rejected, (state, action) => {
+        builder.addCase(fetchData.rejected, (state) => {
             state.loading=false
             state.error = "there was some error"
         })
