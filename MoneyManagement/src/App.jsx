@@ -8,7 +8,7 @@ export default function App() {
   const dispatch = useDispatch()
   const expensesList = useSelector((state) => state.expenseKey.expenseList)
   const totalBudget = useSelector((state) => state.budgetKey.budget)
-  const [budget, setBudget] = useState('');
+  const [budget, setBudget] = useState(0);
   const [expense, setExpense] = useState('');
   const [description, setDescription] = useState('');
 
@@ -38,7 +38,7 @@ export default function App() {
       <Grid container spacing={4}>
         <Grid item xs={12} md={6}>
           <Typography variant="h6">Set Budget</Typography>
-          <Typography variant="h6">{totalBudget}</Typography>
+          <Typography variant="h6">{totalBudget} ₹</Typography>
           <TextField
             fullWidth
             label="Budget"
@@ -85,7 +85,7 @@ export default function App() {
           <TableBody>
             {expensesList.length > 0 && expensesList.map((expenseItem, index) => (
               <TableRow key={index}>
-                <TableCell align="center">{expenseItem.expense}</TableCell>
+                <TableCell align="center">{expenseItem.expense} ₹</TableCell>
                 <TableCell align="center">{expenseItem.description}</TableCell>
               </TableRow>
             ))}
