@@ -56,7 +56,8 @@ export default function Dashboard() {
 
   return (
     <>
-      {userData && 
+      {
+      userData && 
         <>
           <AppBar position="sticky">
             <Container>
@@ -65,7 +66,7 @@ export default function Dashboard() {
                 <Box sx={{ ml: 'auto', display: 'flex', alignItems: 'center', gap: 2 }}>
                   <Tooltip title={`Welcome, ${userData.name}`} arrow>
                     <Avatar>
-                      {userData.name[0]}{userData.surname[0]}
+                      {userData.name[0]}
                     </Avatar>
                   </Tooltip>
                   <Button variant="contained" color="secondary" onClick={handleSignOut}>
