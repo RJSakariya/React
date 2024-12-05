@@ -10,7 +10,8 @@
       "rating": {
         "rate": 3.9,
         "count": 120
-      }
+      },
+      "liked": false
     },
     {
       "id": "2",
@@ -23,7 +24,7 @@
         "rate": 4.1,
         "count": 259
       },
-      "liked": true
+      "liked": false
     },
     {
       "id": "3",
@@ -36,7 +37,7 @@
         "rate": 4.7,
         "count": 500
       },
-      "liked": true
+      "liked": false
     },
     {
       "id": "4",
@@ -48,7 +49,8 @@
       "rating": {
         "rate": 2.1,
         "count": 430
-      }
+      },
+      "liked": false
     },
     {
       "id": "5",
@@ -61,7 +63,7 @@
         "rate": 4.6,
         "count": 400
       },
-      "liked": true
+      "liked": false
     },
     {
       "id": "6",
@@ -85,7 +87,8 @@
       "rating": {
         "rate": 3,
         "count": 400
-      }
+      },
+      "liked": true
     },
     {
       "id": "8",
@@ -97,7 +100,8 @@
       "rating": {
         "rate": 1.9,
         "count": 100
-      }
+      },
+      "liked": true
     },
     {
       "id": "9",
@@ -109,7 +113,8 @@
       "rating": {
         "rate": 3.3,
         "count": 203
-      }
+      },
+      "liked": false
     },
     {
       "id": "10",
@@ -121,7 +126,8 @@
       "rating": {
         "rate": 2.9,
         "count": 470
-      }
+      },
+      "liked": false
     },
     {
       "id": "11",
@@ -133,7 +139,8 @@
       "rating": {
         "rate": 4.8,
         "count": 319
-      }
+      },
+      "liked": false
     },
     {
       "id": "12",
@@ -146,7 +153,7 @@
         "rate": 4.8,
         "count": 400
       },
-      "liked": true
+      "liked": false
     },
     {
       "id": "13",
@@ -158,7 +165,8 @@
       "rating": {
         "rate": 2.9,
         "count": 250
-      }
+      },
+      "liked": true
     },
     {
       "id": "14",
@@ -170,7 +178,8 @@
       "rating": {
         "rate": 2.2,
         "count": 140
-      }
+      },
+      "liked": false
     },
     {
       "id": "15",
@@ -194,7 +203,8 @@
       "rating": {
         "rate": 2.9,
         "count": 340
-      }
+      },
+      "liked": true
     },
     {
       "id": "17",
@@ -206,7 +216,8 @@
       "rating": {
         "rate": 3.8,
         "count": 679
-      }
+      },
+      "liked": true
     },
     {
       "id": "18",
@@ -231,7 +242,8 @@
       "rating": {
         "rate": 4.5,
         "count": 146
-      }
+      },
+      "liked": false
     },
     {
       "id": "20",
@@ -243,7 +255,22 @@
       "rating": {
         "rate": 3.6,
         "count": 145
-      }
+      },
+      "liked": false
+    }
+  ],
+  "Users": [
+    {
+      "id": "1733382200940",
+      "userName": "asd",
+      "password": "123",
+      "confirmPassword": "123"
+    },
+    {
+      "id": "1733385896227",
+      "userName": "asdf",
+      "password": "1234",
+      "confirmPassword": "1234"
     }
   ]
 }

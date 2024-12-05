@@ -4,10 +4,10 @@ export default function Appbar() {
   return (
     <>
       <Box sx={{ flexGrow: 1 }}>
-        <AppBar position="static">
+        <AppBar position="fixed">
         <Container>
           <Toolbar>
-            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+            <Typography variant="h6" component="div" sx={{flexGrow: 1}}>
               E Shop
             </Typography>
           </Toolbar>
