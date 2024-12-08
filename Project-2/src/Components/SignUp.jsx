@@ -32,7 +32,6 @@ export default function SignUp() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(users)
     if (formData.password !== formData.confirmPassword) {
       alert("Passwords do not match!");
       return;
@@ -70,7 +69,7 @@ export default function SignUp() {
         <Typography variant="h5" component="h1" gutterBottom>
           Sign Up
         </Typography>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} style={{marginBottom:'20px'}}>
           <TextField
             label="Username"
             name="userName"

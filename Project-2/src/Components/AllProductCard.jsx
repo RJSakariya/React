@@ -11,13 +11,14 @@ const truncateText = (text, limit) =>
     text?.length > limit ? `${text.substring(0, limit)}...` : text;
 
 export default function AllProductCard() {
-    const dispatch = useDispatch();
+  const dispatch = useDispatch();
   const navigate = useNavigate();
   const location = useLocation();
   const [activeTab, setActiveTab] = useState(0);
+  const [expandedIndex, setExpandedIndex] = useState({ title: null, description: null });
   const products = useSelector((state) => state.sliceKey.productData || []);
-  const categories = useSelector((state) => state.sliceKey.categories)
-  const [expandedIndex, setExpandedIndex] = useState({ title: null,description: null});
+  const categories = useSelector((state) => state.sliceKey.categories || []);
+  const user = useSelector((state) => state.sliceKey.userData);
 
     useEffect(() => {
         if (location.pathname === "/") {
@@ -39,9 +40,9 @@ export default function AllProductCard() {
         }
       };
 
-  const handleLikeToggle = (product,productId, currentLikedState) => {
-    dispatch(toggleLikeAsync({ product,productId, currentLikedState }));
-  };
+      const handleLikeToggle = (productId) => {
+        dispatch(toggleLikeAsync({productId,user}));
+      };
 
     const handleToggleText = (type, index) => {
         setExpandedIndex((prev) => ({
@@ -58,23 +59,24 @@ export default function AllProductCard() {
             Products
           </Typography>
         <Box sx={{ width: "100%", pb: 2 }}>
-          <Tabs
-            value={activeTab}
-            onChange={handleTabChange}
-            indicatorColor="primary"
-            textColor="primary"
-            centered
-            sx={{
-              overflowX:'auto',
-              '& .MuiTab-root': {
-                fontWeight: "bold",
-                textTransform: "none",
-              },
-              '& .Mui-selected': {
-                color: "primary.main",
-              },
-            }}
-          >
+        <Tabs
+        value={activeTab}
+        onChange={handleTabChange}
+        textColor="secondary"
+        indicatorColor="secondary"
+        variant="scrollable"
+        sx={{
+          overflowX: 'auto',
+          '& .MuiTab-root': {
+            fontWeight: "bold",
+            textTransform: "none",
+            color: "black", 
+          },
+          '& .Mui-selected': {
+            color: "secondary.main",
+          },
+        }}
+      >
             <Tab label="ALL PRODUCTS" />
             {categories.map((item, index) => (
               <Tab key={index} label={item.category.toUpperCase()} />
@@ -90,11 +92,11 @@ export default function AllProductCard() {
                         <Grid item xs={12} sm={6} md={4} lg={3} key={el.id}>
                 <Card sx={{ maxWidth: 345, minHeight: 520, p: 2 }}>
                   <IconButton
-                    onClick={() => handleLikeToggle(el, el.id, el.liked)}
+                    onClick={() => handleLikeToggle(el.id)}
                     color="error"
                     aria-label="like"
                   >
-                    {el.liked ? <FavoriteIcon /> : <FavoriteBorderIcon />}
+                    {user?.liked?.includes(el.id)? <FavoriteIcon />: <FavoriteBorderIcon />}
                   </IconButton>
                   <CardMedia
                     component="img"
@@ -117,7 +119,7 @@ export default function AllProductCard() {
                       {el.title.length > 30 && (
                         <Button
                           size="small"
-                          color="primary"
+                          color="secondary"
                           onClick={() => handleToggleText("title", index)}
                         >
                           {expandedIndex.title === index ? "See Less" : "See More"}
@@ -127,17 +129,6 @@ export default function AllProductCard() {
                     <Typography variant="subtitle1" color="text.primary" sx={{ mt: 0 }}>
                       Price: ${el.price.toFixed(2)}
                     </Typography>
-                    <Grid container alignItems="center" sx={{ mt: 1 }}>
-                      <Rating
-                        value={el.rating?.rate || 0}
-                        precision={0.1}
-                        readOnly
-                        size="small"
-                      />
-                      <Typography variant="body2" color="text.secondary" sx={{ ml: 1 }}>
-                        ({el.rating?.count || 0} reviews)
-                      </Typography>
-                    </Grid>
                     <Typography
                       variant="body2"
                       color="text.secondary"
@@ -151,7 +142,7 @@ export default function AllProductCard() {
                       {el.description.length > 70 && (
                         <Button
                           size="small"
-                          color="primary"
+                          color="secondary"
                           onClick={() => handleToggleText("description", index)}
                         >
                           {expandedIndex.description === index ? "See Less" : "See More"}
