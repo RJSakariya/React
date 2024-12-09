@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { Container, Grid, Card, CardMedia, CardContent, Typography, Button, Rating, IconButton} from "@mui/material";
+import { Container, Grid, Card, CardMedia, CardContent, Typography, Button,IconButton} from "@mui/material";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import { toggleLikeAsync } from "../App/slice";
 

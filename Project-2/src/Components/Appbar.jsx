@@ -1,4 +1,3 @@
-import React from "react";
 import { AppBar, Box, Toolbar, Typography, Container, IconButton, Tooltip } from "@mui/material";
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import FavoriteIcon from "@mui/icons-material/Favorite";
@@ -12,7 +11,6 @@ export default function Appbar() {
   const user = useSelector((state) => state.sliceKey.userData);
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const location = useLocation();
 
   const handleSignOut = () => {
     localStorage.setItem("user", JSON.stringify({ Uid: user.id, signIn: false }));

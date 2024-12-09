@@ -8,9 +8,10 @@ import {
   Typography,
   Container,
 } from "@mui/material";
-import { useDispatch,useSelector } from "react-redux";
-import { createUser } from "../App/slice";
-import {Link} from 'react-router-dom';
+import { useDispatch, useSelector } from "react-redux";
+import { createUser, toast } from "../App/slice";
+import { Link } from "react-router-dom";
+
 export default function SignUp() {
   const [formData, setFormData] = useState({
     userName: "",
@@ -33,18 +34,18 @@ export default function SignUp() {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (formData.password !== formData.confirmPassword) {
-      alert("Passwords do not match!");
+      dispatch(toast({ status: "error", message: "Passwords do not match!" }));
       return;
     }
-    const already = users.find((el)=>el.userName === formData.userName)
-    if(already){
-      alert("User Already Exist.");
+    const already = users.find((el) => el.userName === formData.userName);
+    if (already) {
+      dispatch(toast({ status: "error", message: "User already exists." }));
       return;
     }
     const id = Date.now().toString();
     const user = { ...formData, id };
     dispatch(createUser(user));
-    alert("User signed up successfully!");
+    dispatch(toast({ status: "success", message: "User signed up successfully!" }));
   };
 
   return (
@@ -69,7 +70,7 @@ export default function SignUp() {
         <Typography variant="h5" component="h1" gutterBottom>
           Sign Up
         </Typography>
-        <form onSubmit={handleSubmit} style={{marginBottom:'20px'}}>
+        <form onSubmit={handleSubmit} style={{ marginBottom: "20px" }}>
           <TextField
             label="Username"
             name="userName"
@@ -119,9 +120,7 @@ export default function SignUp() {
             Sign Up
           </Button>
         </form>
-        <Link to="/SignIn">
-        Sign In?
-        </Link>
+        <Link to="/SignIn">Sign In?</Link>
       </Box>
     </Container>
   );
