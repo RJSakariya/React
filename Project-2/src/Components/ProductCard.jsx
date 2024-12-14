@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import {
-  Container,Grid,Card,CardMedia,CardContent,Typography,Button,CircularProgress,Rating,IconButton,Box,Tabs, Tab,
+  Container,Grid,Card,CardMedia,CardContent,Typography,Button,CircularProgress,IconButton,Box,Tabs, Tab,
 } from "@mui/material";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
