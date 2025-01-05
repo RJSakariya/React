@@ -6,15 +6,21 @@ import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import InputBase from "@mui/material/InputBase";
 import SearchIcon from "@mui/icons-material/Search";
 import { Typography } from "@mui/material";
-import { useDispatch } from "react-redux";
-import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { useEffect, useState } from "react";
 import { fetchCart } from "../Features/Fetchslice";
+import Cart from "./Cart";
 
 export default function Header() {
+  const [open, setOpen] = useState(false);
+  const toggleDrawer = (newOpen) => {
+    setOpen(newOpen);
+  };
   const dispatch = useDispatch()
-  useEffect(()=>{
+  useEffect(() => {
     dispatch(fetchCart())
-  },[])
+  }, [])
+  const cart = useSelector((state) => state.Fetchslice.cart)
   return (
     <AppBar
       position="sticky"
@@ -30,7 +36,7 @@ export default function Header() {
         disableGutters
         sx={{
           display: "flex",
-          justifyContent:'space-between',
+          justifyContent: 'space-between',
           px: 0,
         }}
       >
@@ -43,7 +49,7 @@ export default function Header() {
         </Box>
         <Box
           sx={{
-            height: 86, width:320, display:'grid', placeContent: 'center',
+            height: 86, width: 320, display: 'grid', placeContent: 'center',
             flexGrow: { sx: 1, md: 0 },
             "&:hover": { background: "#f8f8f8" }
           }}>
@@ -77,7 +83,7 @@ export default function Header() {
             mx: '2px'
           }}
         >
-          <SearchIcon sx={{ color: "black", mx: 1 ,"&:hover":{cursor:"pointer"}}} />
+          <SearchIcon sx={{ color: "black", mx: 1, "&:hover": { cursor: "pointer" } }} />
           <InputBase
             placeholder="Search here..."
             fullWidth
@@ -90,7 +96,7 @@ export default function Header() {
             }}
           />
         </Box>
-        <SearchIcon sx={{ color: "black", mx: 1, display: { sm: 'block', md: 'none' },mr:2,"&:hover":{cursor:"pointer"} }} />
+        <SearchIcon sx={{ color: "black", mx: 1, display: { sm: 'block', md: 'none' }, mr: 2, "&:hover": { cursor: "pointer" } }} />
         <Box
           sx={{
             display: { xs: 'none', md: 'flex' },
@@ -123,23 +129,37 @@ export default function Header() {
               alignItems: 'center'
             }}>
             <Button variant="contained" sx={{
+              maxWidth: 110,
               color: "white",
               textTransform: "none",
               fontSize: 14,
-              fontWeight: 300,
               backgroundColor: "#3d8321",
               boxShadow: 'none',
+              gap: 0.5,
               ml: 1,
               "&:hover": {
                 backgroundColor: "#3d8321",
                 boxShadow: 'none'
               },
-            }}>
-              <ShoppingCartOutlinedIcon /> My Cart
+            }}
+            onClick={()=>toggleDrawer(true)}
+            >
+              <ShoppingCartOutlinedIcon />
+              {
+                cart.length > 0 ?
+                  <Typography variant="h6" component="p" sx={{ fontSize: 14, lineHeight: 1.3, fontWeight: 600, textAlign: 'left' }} >
+                    {cart.reduce((sum, el) => sum + el.count, 0)} items ₹{cart.reduce((sum, el) => sum + (el.count * el.price), 0)}
+                  </Typography>
+                  :
+                  <Typography variant="h6" component="p" sx={{ fontSize: 14, lineHeight: 1.3, fontWeight: 600, textAlign: 'left', textWrap: 'nowrap' }} >
+                    My Cart
+                  </Typography>
+              }
             </Button>
           </Box>
         </Box>
       </Toolbar>
+      <Cart open={open} toggleDrawer={toggleDrawer} />
     </AppBar>
   );
 };

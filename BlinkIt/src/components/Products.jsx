@@ -1,4 +1,4 @@
-import { Box, Button, Card, CardContent, CardMedia, Grid, IconButton, Typography } from "@mui/material";
+import { Box, Button, Card, CardContent, CardMedia, Grid, Typography } from "@mui/material";
 import { useDispatch, useSelector } from "react-redux";
 import { addCart, removeCart } from "../Features/Fetchslice";
 import AddIcon from '@mui/icons-material/Add';
@@ -76,7 +76,10 @@ export default function Products({ category, data }) {
                   </Box>
                   {
                     cart.find((item) => el.id === item.id) ?
-                      <Box size="small" sx={{ color: 'white', background: '#4b8719' }}><IconButton onClick={() => dispatch(addCart(el))}><AddIcon sm/></IconButton>{cart.find((item) => el.id === item.id).count}<IconButton onClick={() => dispatch(removeCart(el))} ><RemoveIcon/></IconButton></Box>
+                      <Box sx={{ color: 'white', background: '#4b8719', display: 'flex', minWidth: 65, height: 30, alignItems: 'center', justifyContent: 'space-evenly', borderRadius: 1 }}>
+                        <AddIcon sx={{ fontSize: 15, cursor: 'pointer' }} onClick={() => dispatch(addCart(el))} />
+                        <Typography variant="p" component='h6' sx={{ fontFamily: 10 }}>{cart.find((item) => el.id === item.id).count}</Typography>
+                        <RemoveIcon sx={{ fontSize: 15, cursor: 'pointer' }} onClick={() => dispatch(removeCart(el))} /></Box>
                       :
                       <Button variant="outlined" size="small" sx={{ border: '1px solid #4b8719', color: '#4b8719', background: '#f7fff9' }} onClick={() => dispatch(addCart(el))}>Add</Button>
                   }
