@@ -1,11 +1,28 @@
-body{
-    min-width: 320px;
+@font-face {
+    font-family: 'wasabicons';
+    src: url(/ba5446f12c7c87b3a16a.woff2) format('woff2'),
+        url(/492035d6714cf7043a98.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
+
+@font-face {
+    font-family: "CustomFont";
+    src: url("https://cdn.grofers.com/assets/web/assets/customiconfont.woff2") format("woff2"),url("https://cdn.grofers.com/assets/web/assets/customiconfont.woff") format("woff"),url("https://cdn.grofers.com/assets/web/assets/customiconfont.ttf") format("truetype");
+    font-style: "normal";
+    font-weight: "normal";
+    font-display: swap
+}
+
 * {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
     font-family: "Montserrat", serif;
+}
+
+body {
+    min-width: 320px;
 }
 
 .nav-buttons {
@@ -15,6 +32,7 @@ body{
     font-weight: 300 !important;
     padding: 10px 14px !important;
 }
+
 .nav-buttons:hover {
-    background-color: #f8f8f8 !important; 
+    background-color: #f8f8f8 !important;
 }

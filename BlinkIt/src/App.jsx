@@ -1,12 +1,13 @@
 import Header from './components/Header';
 import './app.css'
-import { Provider} from 'react-redux';
+import { Provider } from 'react-redux';
 import { Store } from './App/store';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import ProductContainer from './components/ProductContainer';
+import Footer from './components/Footer';
 export default function App() {
-  
+
   return (
     <>
       <Provider store={Store}>
@@ -17,6 +18,7 @@ export default function App() {
             <Route path='/*' element={<ProductContainer />} />
           </Routes>
         </BrowserRouter>
+          <Footer />
       </Provider>
     </>
   )
