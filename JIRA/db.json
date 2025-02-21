@@ -1,0 +1,262 @@
+{
+  "users": [
+    {
+      "id": "u001",
+      "name": "Alice Johnson",
+      "email": "alice.johnson@example.com",
+      "password": "securePass1"
+    },
+    {
+      "id": "u002",
+      "name": "Bob Smith",
+      "email": "bob.smith@example.com",
+      "password": "securePass2"
+    },
+    {
+      "id": "u003",
+      "name": "Charlie Brown",
+      "email": "charlie.brown@example.com",
+      "password": "securePass3"
+    },
+    {
+      "id": "u004",
+      "name": "Diana Prince",
+      "email": "diana.prince@example.com",
+      "password": "securePass4"
+    },
+    {
+      "id": "u005",
+      "name": "Ethan Hunt",
+      "email": "ethan.hunt@example.com",
+      "password": "securePass5"
+    },
+    {
+      "id": "u006",
+      "name": "Fiona Glenanne",
+      "email": "fiona.g@example.com",
+      "password": "securePass6"
+    },
+    {
+      "id": "u007",
+      "name": "George Taylor",
+      "email": "george.taylor@example.com",
+      "password": "securePass7"
+    },
+    {
+      "id": "u008",
+      "name": "Hannah Lee",
+      "email": "hannah.lee@example.com",
+      "password": "securePass8"
+    },
+    {
+      "id": "15dd",
+      "name": "raj",
+      "password": "123456",
+      "email": "r@gmail.com"
+    },
+    {
+      "id": "94d0",
+      "name": "jay",
+      "password": "123456",
+      "email": "jay@gmail.com"
+    }
+  ],
+  "projects": [
+    {
+      "id": "p001",
+      "name": "Project Alpha",
+      "issues": [
+        {
+          "id": "i001",
+          "title": "Fix Login Bug",
+          "type": "Bug",
+          "status": "In Progress"
+        },
+        {
+          "id": "i002",
+          "title": "Add Dark Mode",
+          "type": "Feature",
+          "status": "To Do"
+        },
+        {
+          "id": "i003",
+          "title": "Update README",
+          "type": "Task",
+          "status": "Done"
+        }
+      ],
+      "summary": "A project for tracking tasks and bugs for Alpha release.",
+      "epicLink": "epic-1234",
+      "description": "This project includes key features and bug fixes for the Alpha milestone.",
+      "admin": "u001",
+      "developers": [
+        "u001",
+        "u002",
+        "u003"
+      ],
+      "canChanges": "Admin"
+    },
+    {
+      "id": "p002",
+      "name": "Project Beta",
+      "issues": [
+        {
+          "id": "i004",
+          "title": "Design Landing Page",
+          "type": "Design",
+          "status": "To Do"
+        },
+        {
+          "id": "i005",
+          "title": "Set Up CI/CD",
+          "type": "Task",
+          "status": "In Progress"
+        },
+        {
+          "id": "i006",
+          "title": "Fix API Gateway",
+          "type": "Bug",
+          "status": "Failed"
+        }
+      ],
+      "summary": "Beta release tracking project.",
+      "epicLink": "epic-5678",
+      "description": "Tracking tasks for the Beta milestone.",
+      "admin": "u002",
+      "developers": [
+        "u003",
+        "u004",
+        "u005"
+      ],
+      "canChanges": "All Members"
+    },
+    {
+      "id": "p003",
+      "name": "Project Gamma",
+      "issues": [
+        {
+          "id": "i007",
+          "title": "Create Wireframes",
+          "type": "Design",
+          "status": "Done"
+        },
+        {
+          "id": "i008",
+          "title": "Develop User Profile",
+          "type": "Feature",
+          "status": "To Do"
+        }
+      ],
+      "summary": "User-centered project for the Gamma platform.",
+      "epicLink": "epic-9101",
+      "description": "Focused on user experience improvements for the Gamma platform.",
+      "admin": "u003",
+      "developers": [
+        "u002",
+        "u006",
+        "u007"
+      ],
+      "canChanges": "Admin"
+    },
+    {
+      "id": "p004",
+      "name": "Project Delta",
+      "issues": [
+        {
+          "id": "i009",
+          "title": "Migrate Database",
+          "type": "Task",
+          "status": "In Progress"
+        },
+        {
+          "id": "i010",
+          "title": "Fix Login Timeout Issue",
+          "type": "Bug",
+          "status": "Failed"
+        },
+        {
+          "id": "i011",
+          "title": "Optimize Backend Performance",
+          "type": "Task",
+          "status": "Done"
+        }
+      ],
+      "summary": "Technical improvements for Project Delta.",
+      "epicLink": "epic-1121",
+      "description": "Backend optimization and database migration efforts.",
+      "admin": "u005",
+      "developers": [
+        "u001",
+        "u006",
+        "u008"
+      ],
+      "canChanges": "All Members"
+    },
+    {
+      "id": "p005",
+      "name": "Project Epsilon",
+      "issues": [
+        {
+          "id": "i012",
+          "title": "Develop Chat Module",
+          "type": "Feature",
+          "status": "To Do"
+        },
+        {
+          "id": "i013",
+          "title": "Test Payment Gateway",
+          "type": "Task",
+          "status": "In Progress"
+        }
+      ],
+      "summary": "New feature additions for Project Epsilon.",
+      "epicLink": "epic-3141",
+      "description": "Enhancing user engagement with chat and payment features.",
+      "admin": "u004",
+      "developers": [
+        "u002",
+        "u007",
+        "u008"
+      ],
+      "canChanges": "Admin"
+    },
+    {
+      "id": "2cd8",
+      "admin": "u008",
+      "name": "asd",
+      "summary": "as",
+      "description": "",
+      "epicLink": "",
+      "developers": [
+        "u005"
+      ],
+      "canChanges": "Admin"
+    },
+    {
+      "id": "f593",
+      "admin": "u008",
+      "name": "asd",
+      "summary": "asznsfd jas f ",
+      "description": "asfkna ",
+      "epicLink": "epic 1234",
+      "developers": [
+        "15dd",
+        "u001",
+        "u003"
+      ],
+      "canChanges": "Admin"
+    },
+    {
+      "id": "1d6a",
+      "admin": "15dd",
+      "name": "aswdefg",
+      "summary": "cv b",
+      "description": "sdcfvgbn",
+      "epicLink": "werty",
+      "developers": [
+        "u006"
+      ],
+      "canChanges": "Admin"
+    }
+  ]
+}
